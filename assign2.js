@@ -42,6 +42,18 @@ const highlyratedProducts = products.filter((product) => product.rating >= 4.5);
 console.log("Highly rate products", highlyratedProducts);
 
 //Log Highly Rated Product Names: Use `filter` to get the highly rated products (rating >= 4.5) and then use `forEach` to log only their names.
+//highly rated products alerady defined
 highlyratedProducts.forEach((highlyratedProducts) =>
-  console.log("highly rated products:", highlyratedProducts.name)
+  console.log("highly rated product:", highlyratedProducts.name)
+);
+
+//Affordable Electronics: Use `filter` to find all the products in the 'Electronics' category that are priced below $1000. After filtering, use `forEach` to log their details.
+const Electronics = products.filter(
+  (products) => products.category === "Electronics"
+);
+const affordableElectronics = Electronics.filter(
+  (Electronics) => Electronics.price < 1000
+);
+affordableElectronics.forEach((affordableElectronics) =>
+  console.log("affordable eletronic:", affordableElectronics.name)
 );
